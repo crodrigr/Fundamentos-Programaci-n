@@ -4,27 +4,25 @@ print("Ejercicios con listas")
 
 #Variables globales
 notas=[]
-numEstudiantes=5
+
 
 #Funcion que llena la lista con las notas de los estudiantes
 def cargarNotas():
-    for i in range(0,numEstudiantes) :
+    for i in range(0,10) :
         notas.append(random.randint(0,5))
 
 #Función que imprime la nota de los estudiantes
 def imprimirNotas() :
     notas.sort()
-    for i in range(0,numEstudiantes) :
+    for i in range(0,len(notas)) :
         print("Estudiante: ",i," nota: ",notas[i])
 
 def promedioNotas() :
-    promedio=sum(notas)/numEstudiantes
+    promedio=sum(notas)/len(notas)
     return promedio
 
 def registraNota() :
-    nota=int(input("Ingrese la nota del estudiante: "))
-    global numEstudiantes
-    numEstudiantes=numEstudiantes+1    
+    nota=int(input("Ingrese la nota del estudiante: "))      
     notas.append(nota)
 
 def menu() :
