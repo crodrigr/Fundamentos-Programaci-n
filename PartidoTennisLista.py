@@ -30,6 +30,7 @@ def rondas(l1) :
 
 
 #--------Inicio de programa-------------------#
+
 mostrarTenistas(tenistas)
 print("")
 while len(tenistas)>1  :
