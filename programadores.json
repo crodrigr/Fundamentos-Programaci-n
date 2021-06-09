@@ -1,0 +1,28 @@
+{
+    "programadores": [
+        {
+            "Id": 1001,
+            "nombre": "Camilo",
+            "apellido": "Rodriguez",
+            "email": "crodrigr@gmail.com",
+            "edad": 38,
+            "pais": "Colombia"
+        },
+        {
+            "Id": 1002,
+            "nombre": "Andres",
+            "apellido": "Martinez",
+            "email": "amarir@gmail.com",
+            "edad": 48,
+            "pais": "Colombia"
+        },
+        {
+            "Id": 1003,
+            "nombre": "Milton",
+            "apellido": "Oyola",
+            "email": "moyola@gmail.com",
+            "edad": 28,
+            "pais": "Colombia"
+        }
+    ]
+}
