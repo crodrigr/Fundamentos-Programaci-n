@@ -15,6 +15,7 @@ a={
 dato_docentes['docentes'].append(a)
 
 
+
 def menuDocente():
     print("__MENU DOCENTE___")
     print("__1.Crear docente___")

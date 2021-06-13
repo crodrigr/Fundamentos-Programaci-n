@@ -1,0 +1,5 @@
+nombre	apellido	edad
+camilo	rodriguez	40
+juan	villamizar	35
+maria 	perez	25
+jose	castro	58
