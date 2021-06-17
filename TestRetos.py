@@ -1,44 +1,62 @@
-valor = ['piedra', 'papel','tijera']
-#informamos la variabe que quiere indicar el cliente
-print("ingrese el valor piedra(0),papel(1),tijera(2)")
-#Creamos el contador para las vecece ganadas
-ganador = [0, 0]
-JUEGOS = 0
-#ingresamos la cantidad de juego
-ju=int(input("ingrese la cantidad de juegos: "))
-while JUEGOS <= ju:
-# piedra(0), papel(1), tijeras(2)
-    a = int(input("ingrese el valor a elegir jugador A: "))
-    b = int(input("ingrese el valor a elegir jugador B: "))
-    print ("El usuario A eligio: ", valor[a])
-    print ("El usuario B eligio: ", valor[b])
+#valores
+A=270
+B=340
+C=390
+monedas=[]
+print("A - 270\nB - 340\nC - 390")
+#ingreso de datos
+print("escoja uno de los tres productos:")
+p=input()
+if p== 'A' or p== 'a':
+    print("Costo del Producto: ",A)
+    costo=270
+elif p== 'B' or p=='b':
+    print("Costo del Producto:",B)
+    costo=340
+elif p== 'C'or p=='C':
+    print("Costo del Producto:",C)
+    costo=390
+else:
+    print("producto no existente")
+#funcion ingreso monedas
+print ("¿CUANTAS MONEDAS TRAE?")
+mt=int(input())
+IngresoMonedas=0
+def monedasIngresadas():
+    global IngresoMonedas
+    for i in range(0,mt):
+        print ('monedas aceptadas')
+        print ('1. - $100 \n2. - $50 \n3. - $10')
+        m=int(input("ingrese las monedas "))
+        monedas.append(m)
+        if m == 1:
+            IngresoMonedas += 100
+            monedas.append(100)
+        elif m == 2:
+            IngresoMonedas += 50
+            monedas.append(50)
+        elif m ==3: 
+            IngresoMonedas += 10
+            monedas.append(10)
+        else:
+            print ('Moneda no encontrado')
+monedasIngresadas()
+print ("sus monedas suman: ",IngresoMonedas)
+print ("Sus Monedas Ingresadas son: ",monedas)
+print ('Precio del Producto: ',costo)
+#funcion registro de vueltos
+vueltos= IngresoMonedas - costo
+def vueltas():
+    print ('sus vuelt0s son:',vueltos)
+    vueltos100=int(vueltos/100)
+    for i in range (vueltos100):
+        print('100 ')
+    vueltos50=int((vueltos-(vueltos100*100))/50)
+    for i in range (vueltos50):
+        print('50 ')
+    vueltos10=int((vueltos-(vueltos100*100)-(vueltos50*50))/10)
+    for i in range (vueltos10):
+       print('10')
+vueltas()
 
-    if a == b :
-        print ("jugo empatado")
-    elif a ==0 and b == 1 :
-        print("Gana jugador B, Tijeras ganan a papel")
-        ganador[1] +=1
-    elif a ==0 and b == 2 :
-        ganador[0] +=1
-        print("Gana jugador A, Piedra le gana a tijeras")
-    elif a ==1 and b == 0 :
-        ganador[0] +=1
-        print ("Gana jugador A, Papel le gana a piedra")
-    elif a ==1 and b == 2:
-        ganador[0] +=1
-        print ("Gana jugador B, Tijeras de gana a piedra")
-    elif a==2 and b== 0:
-        ganador[1] +=1
-        print ("Gana jugador B, Piedra le gana a tijera")
-    elif a==2 and b== 1:
-        ganador[0] +=1
-        print ("Gana jugador A, tijera le gana a papel")
-    print(ganador)
-    JUEGOS = JUEGOS + 1
-    #depender de la cantidad de juegos si ya se gano 3 veces indica el ganador
-    if ganador[1] == 3:
-        print("jugador B es el ganador")
-        quit()
-    elif ganador[0] == 3:
-        print("jugador A es el ganador")
-        quit()
+

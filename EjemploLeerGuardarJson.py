@@ -62,6 +62,8 @@ def menuPrincipal():
 loadJson()
 op=menuPrincipal()
 
+datos['programadores'][0]['email']='crodrigr@unab.edu.co'
+
 while op>0 and op<4 :
    if  op==1:
         crearProgramados()        
